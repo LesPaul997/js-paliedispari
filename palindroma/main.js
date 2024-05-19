@@ -33,31 +33,12 @@ const userWord = prompt('Inserisci qui la tua parola');
 const parolaInvertita = invertiParola(userWord);
 
 if (userWord === parolaInvertita) {
-    console.log('La parola inserita è palindroma');
+    alert('La parola inserita è palindroma');
 } else {
-    console.log('La parola inserita non è palindroma');
+    alert('La parola inserita non è palindroma');
 }
 
 function invertiParola(str) {
     const strInversa = str.toLowerCase().split('').reverse().join(''); //non mi funziona il toLowerCase!!
     return strInversa;
 }
-
-
-//SECONDO PROGRAMMA
-//L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-
-const userChoice = prompt('Scrivi pari o dispari');
-const userNumber = prompt('Scegli un numero da 1 a 5');
-
-//Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-
-for (let i = 0; i < 1; i++) {
-    const currentNumber = getRndIndecer(1,5);
-    console.log(currentNumber);
-}
-function getRndIndecer (min,max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-//Sommiamo i due numeri
