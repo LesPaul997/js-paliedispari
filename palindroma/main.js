@@ -28,7 +28,7 @@ if (userWord === parolaInvertita) {
 
 //Creare una funzione per capire se la parola inserita è palindroma
 
-const userWord = prompt('Inserisci qui la tua parola');
+const userWord = prompt('Inserisci qui la tua parola').toLowerCase();
 
 const parolaInvertita = invertiParola(userWord);
 
@@ -39,6 +39,6 @@ if (userWord === parolaInvertita) {
 }
 
 function invertiParola(str) {
-    const strInversa = str.toLowerCase().split('').reverse().join(''); //non mi funziona il toLowerCase!!
+    const strInversa = str.split('').reverse().join(''); //non mi funziona il toLowerCase!!
     return strInversa;
 }
